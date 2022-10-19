@@ -1,0 +1,186 @@
+public class Assignment1 {
+
+    int a = 10;
+    int b = 20;
+
+    int num1 = 10;
+    double num2 = 90.78;
+    double num3 = 111;
+    double num4 = 8989;
+    double num5 = 7876;
+
+    int i = 0;
+    int num = 0;
+    String primeNumbers = "";
+
+    int n = 5;
+
+    public static void main(String[] args) {
+        Assignment1 ass1 = new Assignment1();
+////        ass1.swapNum();
+////        ass1.printSum(ass1.num1, ass1.num2, ass1.num3, ass1.num4, ass1.num5);
+////        ass1.averageSum(ass1.num1, ass1.num2, ass1.num3, ass1.num4, ass1.num5);
+////        ass1.printEvenNum();
+////        ass1.printOddNum();
+//        ass1.printPrime();
+//    }
+//        ass1.printPattern();
+//        ass1.printAbove80();
+//        ass1.breakExecution();
+        ass1.breakExeSelenium();
+    }
+////    Task 1 – Write a program to swap two number. For example a=10 and b=20 output should be a=20 and b=10
+//    public void swapNum(){
+//        int a1 =  a;
+//        int b1 =  b;
+//
+//        a = b1;
+//        b = a1;
+//        System.out.println("a = " + a);
+//        System.out.println("b = " + b);
+//
+//    }
+//
+////    Task 2-  Write a program to print the sum of below 5 numbers.
+////	10,90.78,111,8989,7876
+//
+//    public double printSum(int num1, double num2, double num3, double num4, double num5){
+//        double sum = num1 +num2+num3+num4+num5;
+//        System.out.println(sum);
+//        return sum;
+//    }
+//
+////    Task 3-  Write a program to print the average of below 5 numbers.
+////	10,90.78,111,8989,7876
+//
+//    public double averageSum(int num1, double num2, double num3, double num4, double num5){
+//
+//    double sum  = printSum(num1,num2,num3,num4,num5);
+//    double ave = sum/5;
+//        System.out.println(ave);
+//    return  ave;
+//    }
+//
+////    Task 4- Write a program to print all even numbers from 1-200
+//    public void printEvenNum(){
+//        for (int i=0;i<200;i=i+2) {
+//            System.out.println(i+2);
+//        }
+//    }
+//
+////    Task 5- Write a program to print all odd numbers from 1-50
+//    public void printOddNum(){
+//        for (int i=1; i<50;i=i+2){
+//            System.out.println(i);
+//        }
+//    }
+
+//    Task 6- Write a program to print all prime numbers from 1-1000
+//
+//    public void printPrime(){
+//
+//        for (i= 1; i<=1000; i++){
+//            int counter = 0;
+//
+//            for(num =i; num>=1; num--)
+//
+//            {
+//                if(i%num==0){
+//                    counter = counter +1;
+//                }
+//            }
+//            if (counter == 2) {
+//
+//            primeNumbers = primeNumbers + i + " " ;
+//            }
+//        }
+//
+//        System.out.println("PrimeNumbers are: ");
+//        System.out.println(primeNumbers);
+//    }
+
+//    Task 7- Write a program to print below pattern
+
+
+//        public void printPattern() {
+//
+//            for (int i = 0; i < n; i++) // for number of rows(n)
+//
+//            {
+//                for (int j = n - i; j > 1; j--) // a loop for spaces
+//
+//                {
+//
+//                    System.out.print(""); //to print space
+//
+//                }
+//
+//                for (int j = 0; j <= i; j++) //for number of columns
+//
+//                {
+//
+//                    System.out.print(" * "); //to print star
+//
+//                }
+//
+//                System.out.println(); //end-line after every row
+//
+//            }
+//
+//        }
+//}
+
+//    Task 8- Write a program to print below students marks who have scored above 80
+//    Example- 78,12,89,55,35
+//    Output-  78,89
+
+//    public void printAbove80(){
+//        int[] list = {78, 12, 89, 55, 35};
+//
+//        for (int i = 0;i<5;i++){
+//
+//            if (list[i] > 80 ){
+//                System.out.println(list[i]);
+//            }
+//        }
+//    }
+//}
+
+
+    //    Task 9- Write a program which will break the current execution if it find number 85
+//    Input – [12,34,66,85,900]
+//
+//    public void breakExecution() {
+//        int[] input = {12, 34, 66, 85, 900};
+//
+//        for (int i = 0; i < 5; i++) {
+//
+//            if (input[i] == 85) {
+//                break;
+//            }
+//            System.out.println(input[i]);
+//        }
+//
+//    }
+
+
+//    Task 10- Write a program which will break the current execution if it find “Selenium”
+//    Input – [“Java”,”JavaScript”,”Selenium”,”Python”,”Mukesh”]
+
+    public void breakExeSelenium() {
+
+        String[] inputS = {"Java", "JavaScript", "Selenium", "Python", "Mukesh"};
+
+        for (int i = 0; i<5; i++){
+
+            if (inputS[i] == "Selenium"){
+                break;
+            }
+            System.out.println(inputS[i]);
+        }
+
+
+    }
+
+
+}
