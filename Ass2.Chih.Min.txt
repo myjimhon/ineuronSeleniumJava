@@ -1,0 +1,139 @@
+public class Assignment2Trainer{
+    
+//        Task 1- Create a class name as “Trainer” which will have 4 fields name, department ,  email, id. Trainer can teach Selenium, DevOps, Web Development.
+//                Note- use method, constructor
+//        Trainer details are
+//        Trainer 1 – “Mukesh” ,”Testing”,mukesh@gmail.com, 1
+//        Trainer 2 – “Hitesh” ,”Dev”,mukesh@gmail.com, 2
+//        Trainer 3 – “Mukesh” ,”DevOps”,mukesh@gmail.com, 3
+
+        String name;
+        String department;
+        String email;
+        int id;
+
+    public static void main(String[] args) {
+
+        String[] Train1= {"Mukesh","Testing","mukesh@gmail.com", "1"};
+        String[] Train2= {"Hitesh","Dev","mukesh@gmail.com", "2"};
+        String[] Train3= {"Mukesh","DevOps","mukesh@gmail.com", "3"};
+
+
+        Assignment2Trainer Trainer1 = new Assignment2Trainer(Train1);
+        Assignment2Trainer Trainer2 = new Assignment2Trainer("Hitesh","Dev","mukesh@gmail.com",2);
+        Assignment2Trainer Trainer3 = new Assignment2Trainer("Mukesh","DevOps","mukesh@gmail.com",3);
+
+        Trainer1.Teach();
+        Trainer2.Teach();
+        Trainer3.Teach();
+
+//        Task 2- Extension of task 1 – Store all trainer information in Array.
+
+
+        List listOfTrainers = new ArrayList();
+        listOfTrainers.add(Trainer1);
+        listOfTrainers.add(Trainer2);
+        listOfTrainers.add(Trainer3);
+
+
+
+    }
+
+    public void Teach(){
+        if (department == "Testing") {
+            System.out.println("Teach Selenium");
+        }
+        else if (department == "DevOps"){
+            System.out.println("Teach DevOps");
+        }
+        else {
+            System.out.println("Teach Web Development");
+        }
+        System.out.println(name);
+        System.out.println(email);
+        System.out.println(id);
+    }
+    public Assignment2Trainer(String name, String department,String email,int id){
+
+        this.name = name;
+        this.department = department;
+        this.email = email;
+        this.id = id;
+
+
+    }
+
+    public Assignment2Trainer(String[]Trainer){
+
+     this.name = Trainer[0];
+        this.department = Trainer[1];
+
+        this.email = Trainer[2];
+        this.id = Integer.parseInt(Trainer[3]);
+    }
+}
+
+
+//        Task 3 – Create a program which will store students information and print the output.
+//        Program should ask how many students information you want to store. For each students it should ask name, email, phone, address, status
+//        Once all entries are done, program should ask which user information you want to fetch and should print the same.
+//        Note- Use scanner class for dynamic students
+
+
+
+public class Assignment2Student {
+    static String name;
+    static String email;
+    static String mobile;
+    static String status;
+    static int id;
+
+    public static void main(String[] args) {
+
+        System.out.println("How many Student Details do you want to store?");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n1 = scanner.nextInt();
+
+        List listOfStudent = new ArrayList();
+
+
+
+        for (int i=0; i <n1; i++) {
+            System.out.println("What is your name?");
+            name = scanner.next();
+            System.out.println("What is your email?");
+            email = scanner.next();
+            System.out.println("What is your status?");
+            status = scanner.next();
+            System.out.println("What is your mobile?");
+            mobile = scanner.next();
+
+            List stuDetails = new ArrayList();
+
+            stuDetails.add(name);
+            stuDetails.add(email);
+            stuDetails.add(status);
+            stuDetails.add(mobile);
+
+            listOfStudent.add(stuDetails);
+
+//            CHECKS
+//            System.out.println(stuDetails.get(0));
+//            System.out.println(stuDetails);
+//            System.out.println(listOfStudent);
+        }
+
+
+// Get Details
+
+        System.out.println("Which student detail number you want to retrieve?");
+        id = scanner.nextInt();
+
+        System.out.println(listOfStudent.size());
+        System.out.println(listOfStudent.get(id-1));
+
+    }
+
+}
